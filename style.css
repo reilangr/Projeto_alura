@@ -12,7 +12,7 @@ body {
     height: 100vh; /* Preenche a altura total da viewport */
     margin: 0; /* Remove a margem padrão */
     padding: 0; /* Remove o padding padrão */
-    background-image: url('img/fundo.gif');
+    background-image: url('fundo.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
