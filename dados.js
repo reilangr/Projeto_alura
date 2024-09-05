@@ -49,3 +49,4 @@ form.addEventListener('submit', (event) => {
 if (listaCadastros.children.length === 0) {
   listaCadastros.appendChild(mensagemVazio);
 }
+
