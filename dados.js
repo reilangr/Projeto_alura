@@ -28,7 +28,7 @@ const data = new Date().toLocaleDateString(); // Obtém a data atual
 function formatarData(data) {
     const dia = data.getDate().toString().padStart(2, '0');
     const mes = (data.getMonth() + 1).toString().padStart(2, '0');
-    const ano = data.getFullYear().toString().substr(2);   
+    const ano = data.getFullYear().toString().substr(2);
   
   
     return `${dia}/${mes}/${ano}`;
