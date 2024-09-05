@@ -5,24 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     
-    <title>Alura imersão - Reilan</title>
+    <title>Projeto Alura - Caminho da Prosperidade</title>
 </head>
 <body>
     <header>
-        <h1>Reilan Ribeiro</h1>
+        <h1>Caminho da Prosperidade</h1>
     </header>
     <main>
+        <!--Inicio form cadastro tarefas-->
         <section>
-        <input type="text" placeholder="pesquisar">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Adicionar Tarefas</h2>
+                    <form id="cadastroForm">
+                        <input type="text" id="tarefa" placeholder="Tarefa">
+                        <input type="text" id="descricao" placeholder="Descrição">
+                        <input type="date" id="data_fim" placeholder="Data para Conluir">                       
+                    </form>
+
+                    <button type="submit">Cadastrar</button>
+                    <!-- <button id="btnLimpar">Limpar Lista</button> -->
+                </div>
+                
+                <div class="list-container">
+                    <h2>Seus Objetivos</h2>
+                    <ul id="listaCadastros">                       
+                    </ul>
+                </div>
+            
+
+
+
+
+       <!-- <input type="text" placeholder="pesquisar">
         <button onclick="pesquisar()">pesquisar</button>
-        </section>
-        <section class="resultados-pesquisa" id="resultados-pesquisa">            
-        </section>
+        </section>-->
+        <!--Fim form Terefa-->
+
+
+
+        <!--<section class="resultados-pesquisa" id="resultados-pesquisa"> -->          
+        </section> 
+            
+
+        
+
     </main>
     <footer>
         <p>Todos os direitos reservados 2024</p>
     </footer>
     <script src="dados.js"></script>
     <script src="app.js"></script>
+
+    
+      
+    
+    
+
+
 </body>
 </html>
