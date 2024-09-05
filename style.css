@@ -184,27 +184,37 @@ footer {
 /* +++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* Estilize os elementos da página conforme sua preferência */
+
 .container {
-    display: flex;
-    justify-content: center; /* This centers the container horizontally */
-    align-items: center; /* This centers the container vertically */
+    display: flex;    
   }
   
   .form-container {
-    flex: 0.4;
+    flex: 0;
     padding: 20px;
     background-color:  rgba(0, 10, 25, 0.55);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
         
   }
   
-  .list-container {
-    flex: 1;
+
+ul {
+    list-style: none;
     padding: 20px;
-  }
-  
-  .item {
-    border: 1px solid #ccc;
+}
+
+li {
+    color: #fffcfc;
+    border-radius: 1.5rem;
+    border: 1px solid #ccc ;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 10, 25, 0.55);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#mensagem-vazio {
+    text-align: center;
+    font-style: italic;
+    color: #888;
   }

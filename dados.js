@@ -19,65 +19,33 @@
 // ]
 
 
-// ++++++++++++++++++++++++++++++++4343
-
+// ++++++++++++++++++++++++++++++++
 const form = document.getElementById('cadastroForm');
 const listaCadastros = document.getElementById('listaCadastros');
-const data = new Date().toLocaleDateString(); // Obtém a data atual
-
-function formatarData(data) {
-    const dia = data.getDate().toString().padStart(2, '0');
-    const mes = (data.getMonth() + 1).toString().padStart(2, '0');
-    const ano = data.getFullYear().toString().substr(2);
-  
-  
-    return `${dia}/${mes}/${ano}`;
-  }
+const mensagemVazio = document.createElement('p');
+mensagemVazio.id = 'mensagem-vazio';
+mensagemVazio.textContent = 'Nenhuma tarefa cadastrada.';
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    const tarefa = document.getElementById('tarefa').value;
-    const descricao = document.getElementById('descricao').value;
-    const data_fim = document.getElementById('data_fim').value;
-    const dataCadastro = new Date().toLocaleDateString(); // Obtém a data de cadastro
+  const tarefa = document.getElementById('tarefa').value;
+  const descricao = document.getElementById('descricao').value;
 
-    const cadastro = { tarefa, descricao,data_fim, dataCadastro };
+  if (tarefa.trim() !== '') {
+    const li = document.createElement('li');
+    li.textContent = `${tarefa} - ${descricao}`;
+    listaCadastros.appendChild(li);
+    listaCadastros.removeChild(mensagemVazio); // Remove a mensagem se houver itens
+  } else {
+    // Se a tarefa estiver vazia, mostra a mensagem
+    listaCadastros.appendChild(mensagemVazio);
+  }
 
-    // Obter os dados já salvos no localStorage
-    const cadastrosSalvos = JSON.parse(localStorage.getItem('cadastros')) || [];
-
-    // Adicionar o novo cadastro aos dados salvos
-    cadastrosSalvos.push(cadastro);
-
-    // Salvar os dados atualizados no localStorage
-    localStorage.setItem('cadastros', JSON.stringify(cadastrosSalvos));
-
-    // Limpar o formulário
-    form.reset();
-
-    // Atualizar a lista na tela
-    atualizarLista();
+  form.reset();
 });
 
-function atualizarLista() {
-    const cadastrosSalvos = JSON.parse(localStorage.getItem('cadastros')) || [];
-
-    listaCadastros.innerHTML = '';
-
-    cadastrosSalvos.forEach(cadastro => {
-        const li = document.createElement('li');
-        li.textContent = `Início - ${formatarData(new Date(cadastro.dataCadastro))} - Tarefa: ${cadastro.tarefa} - 
-                            Descrição: ${cadastro.descricao} - Conclusão: ${formatarData(new Date(cadastro.data_fim))}`;
-        listaCadastros.appendChild(li);
-    });
+// Verifica se a lista está vazia ao carregar a página
+if (listaCadastros.children.length === 0) {
+  listaCadastros.appendChild(mensagemVazio);
 }
-
-// function limparLista() {
-//     localStorage.removeItem('cadastros');
-//     atualizarLista();
-//   }
-  
-//   btnLimpar.addEventListener('click', limparLista);
-// Carregar a lista ao carregar a página
-atualizarLista();
