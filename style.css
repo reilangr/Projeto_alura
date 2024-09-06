@@ -33,6 +33,25 @@ h2 {
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
+h3 {
+  background-color:  rgba(49, 49, 49, 0.24);;
+  color: #fdfdfd; /* Cor do texto */
+  padding-right: 50%;  
+  width: 70%;
+  margin-left: 14%;
+  text-align: center; /* Alinha o texto ao centro */
+  letter-spacing: 0.4rem; /* Espaçamento entre letras */
+  animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 
 /* Estiliza as seções da página */
 section {
@@ -147,6 +166,46 @@ footer {
         font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
     }
 }
+
+
+nav {
+  height: 100vh; /* Altura total da viewport */
+  
+  padding: 20px;
+  position: fixed;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fdfdfd;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #222831;
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+nav  li:hover {
+  background-color: #5f77e2; 
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+#conteudo {
+  margin-left: 200px; /* Ajustar de acordo com a largura do menu */
+  padding: 20px;
+}
+
+
+
 
 
 
@@ -275,3 +334,21 @@ li {
       opacity: 1;
     }
   }
+
+
+  p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+.sobre{
+  width: 80%; /* Define a largura máxima dos containers internos */
+  background-color: #e2e2e2;
+  margin: 20px;
+  display: flex; /* Usa Flexbox para layout */
+  flex-direction: column; /* Alinha os itens na vertical */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  animation: slideIn 1s ease-in-out;
+
+}

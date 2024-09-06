@@ -1,23 +1,61 @@
 
-// let dados = [
-//     {titulo:"Elon Musk",
-//         descricao: "Elon Musk é um empreendedor visionário sul-africano, naturalizado canadense e estadunidense, conhecido por liderar empresas que revolucionam diversos setores. Fundador da SpaceX, Tesla, Neuralink e The Boring Company, entre outras, Musk é responsável por avanços significativos em áreas como exploração espacial, veículos elétricos, inteligência artificial e infraestrutura. Sua ambição de transformar o mundo e colonizar Marte o tornaram uma das figuras mais influentes e controversas do século XXI.",
-//         link: "https://pt.wikipedia.org/wiki/Elon_Musk"
-
+// const filmes = [
+//   {titulo: "O Homem que Mudou o Jogo",
+//     descricao: "Uma história inspiradora sobre como a análise de dados e um pensamento inovador podem transformar um time de baseball.",
+//     link: "https://www.imdb.com/title/tt1210166/",
+//     tags: "esportes, dados, estratégia"
 // },
 // {
-//     titulo: "Bill Gates",
-//     descricao: "Bill Gates é um empresário, filantropo e programador de computador americano. Ele é o co-fundador da Microsoft Corporation, que se tornou uma das empresas de software mais valiosas do mundo. Gates é conhecido por sua riqueza e por suas atividades filantrópicas através da Fundação Bill e Melinda Gates.",
-//     link: "https://pt.wikipedia.org/wiki/Bill_Gates"
+//   titulo: "A Rede Social",
+//   descricao: "A história da criação do Facebook, uma jornada épica sobre empreendedorismo, ambição e as complexidades da amizade.",
+//   link: "https://www.imdb.com/title/tt1285016/",
+//   tags: "tecnologia, empreendedorismo, redes sociais"
 // },
-
-
 // {
-//     titulo: "Steve Jobs",
-//     descricao: "Steve Jobs foi um empresário e inventor americano. Ele foi co-fundador e CEO da Apple Inc. Jobs é amplamente considerado uma das figuras mais influentes da indústria da tecnologia, sendo responsável por revolucionar os mercados de computadores pessoais, música, telefonia móvel e animação.",
-//     link: "https://pt.wikipedia.org/wiki/Steve_Jobs"
+//   titulo: "O Lobo de Wall Street",
+//   descricao: "Um retrato vívido da ambição desenfreada e das consequências de perseguir o sucesso a qualquer custo.",
+//   link: "https://www.imdb.com/title/tt0995361/",
+//   tags: "drama, biografia, crime"
 // },
-// ]
+// {
+//   titulo: "A Busca pela Felicidade",
+//   descricao: "Uma história inspiradora sobre um pai solteiro que luta para criar um filho e construir uma vida melhor.",
+//   link: "https://www.imdb.com/title/tt0454922/",
+//   tags: "drama, biografia, família"
+// },
+// {
+//   titulo: "Coco Antes de Chanel",
+//   descricao: "A história da vida de Coco Chanel, uma jornada de empoderamento feminino e superação de obstáculos.",
+//   link: "https://www.imdb.com/title/tt0468550/",
+//   tags: "biografia, drama, moda"
+// },
+// {
+//   titulo: "Steve Jobs",
+//   descricao: "Um retrato biográfico do visionário fundador da Apple, explorando sua vida e legado.",
+//   link: "https://www.imdb.com/title/tt2395427/",
+//   tags: "biografia, drama, tecnologia"
+// },
+// {
+//   titulo: "O Jogo da Imitação",
+//   descricao: "A história real de Alan Turing, o matemático que ajudou a decifrar a máquina Enigma e a mudar o curso da Segunda Guerra Mundial.",
+//   link: "https://www.imdb.com/title/tt2084970/",
+//   tags: "drama, guerra, histórico"
+// },
+// {
+//   titulo: "Startup",
+//   descricao: "Uma série documental que acompanha a jornada de startups em busca de sucesso.",
+//   link: "https://www.netflix.com/title/80117542",
+//   tags: "documentário, negócios, empreendedorismo"
+// },
+// {
+//   titulo: "O Show de Truman",
+//   descricao: "Um clássico da ficção científica que levanta questões profundas sobre a identidade, a liberdade e a busca por autenticidade.",
+//   link: "https://www.imdb.com/title/tt0120386/",
+//   tags: "ficção científica, drama, filosofia"
+// }
+// ];
+
+
 
 
 // ++++++++++++++++++++++++++++++++
@@ -104,3 +142,24 @@ function imprimirLista() {
   
   // Chamar a função ao carregar a página
   window.onload = gerarMensagem;
+
+
+  
+// +++++++++++++++++++++++++++++++++++++++++++++++++ MENU +++++++++++++++++++++++++++++++++++
+
+// Obtém todos os links do menu
+const links = document.querySelectorAll('nav a');
+
+// Função para verificar qual link está ativo e adicionar uma classe
+function highlightActiveLink() {
+    links.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+// Chama a função ao carregar a página
+highlightActiveLink();
