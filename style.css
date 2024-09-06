@@ -336,13 +336,9 @@ li {
   }
 
 
-  p {
-    text-align: center;
-    line-height: 1.6;
-}
-
-
 .sobre{
+  text-align: center;
+  line-height: 1.6;
   width: 80%; /* Define a largura máxima dos containers internos */
   background-color: #e2e2e2;
   margin: 20px;
