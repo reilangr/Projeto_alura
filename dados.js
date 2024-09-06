@@ -88,8 +88,8 @@ function imprimirLista() {
     "Cuide da Saúde!",
     "Para tudo tem uma solução!",
     "Tenha Nobreza!",
-    "Cuide do seus Pennsamentos!",
-    "Aumente sua frequência menta.",
+    "Cuide do seus Pensamentos!",
+    "Aumente sua frequência mental.",
     "Se Movimente! ",
     
     // Adicione mais mensagens aqui
