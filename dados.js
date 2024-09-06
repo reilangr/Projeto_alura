@@ -1,3 +1,4 @@
+
 // let dados = [
 //     {titulo:"Elon Musk",
 //         descricao: "Elon Musk é um empreendedor visionário sul-africano, naturalizado canadense e estadunidense, conhecido por liderar empresas que revolucionam diversos setores. Fundador da SpaceX, Tesla, Neuralink e The Boring Company, entre outras, Musk é responsável por avanços significativos em áreas como exploração espacial, veículos elétricos, inteligência artificial e infraestrutura. Sua ambição de transformar o mundo e colonizar Marte o tornaram uma das figuras mais influentes e controversas do século XXI.",
@@ -50,3 +51,56 @@ if (listaCadastros.children.length === 0) {
   listaCadastros.appendChild(mensagemVazio);
 }
 
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++ Impressão +++++++++++++++++++++++++++++++++++++++++++++++++++++
+function imprimirLista() {
+    // Cria um novo elemento div para conter a lista a ser impressa
+    const divImpressao = document.createElement("div");
+    divImpressao.style.display = "none"; // Esconde a div para não interferir na visualização
+    divImpressao.appendChild(listaCadastros.cloneNode(true)); // Clona a lista para a nova div
+  
+    // Adiciona um título à div de impressão (opcional)
+    const titulo = document.createElement("h2");
+    titulo.textContent = "Lista de Tarefas";
+    divImpressao.appendChild(titulo);
+  
+    // Adiciona a div ao corpo do documento
+    document.body.appendChild(divImpressao);
+  
+    // Define estilos para a impressão (opcional)
+    divImpressao.style.fontSize = "12pt";
+    divImpressao.style.fontFamily = "Arial";
+  
+    // Imprime a div
+    window.print();
+  
+    // Remove a div após a impressão
+    document.body.removeChild(divImpressao);
+  }
+
+//++++++++++++++++++++++++++++++++++++++++ Mensagem motivacional ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  const mensagens = [
+    "Você é capaz de mais do que imagina!",
+    "Acredite em si mesmo e vá em frente!",
+    "Cada dia é uma nova oportunidade.",
+    "O sucesso vem com a persistência.",
+    "Busquem o Conhecimento!",
+    "Cuide da Saúde!",
+    "Para tudo tem uma solução!",
+    "Tenha Nobreza!",
+    "Cuide do seus Pennsamentos!",
+    "Aumente sua frequência menta.",
+    "Se Movimente! ",
+    
+    // Adicione mais mensagens aqui
+  ];
+  
+  const mensagemElement = document.getElementById('mensagem-motivacional');
+  
+  function gerarMensagem() {
+    const indiceAleatorio = Math.floor(Math.random() * mensagens.length);
+    mensagemElement.textContent = mensagens[indiceAleatorio];
+  }
+  
+  // Chamar a função ao carregar a página
+  window.onload = gerarMensagem;

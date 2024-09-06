@@ -83,37 +83,6 @@ section button:hover {
     border-radius: 0.6rem; /* Borda arredondada */
 }
 
-/* Estiliza cada item de resultado */
-.item-resultado {
-    background: #FFFFFF; /* Cor de fundo dos itens */
-    border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
-
-/* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
-}
-
-/* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
-}
-
-/* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-}
-
-/* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
-    color: #45474B; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
-}
 
 /* Estiliza o rodapé da página */
 footer {
@@ -211,6 +180,7 @@ li {
     margin-bottom: 5px;
     background-color: rgba(0, 10, 25, 0.55);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    animation: slideIn 1s ease-in-out;
 }
 
 #mensagem-vazio {
@@ -222,14 +192,64 @@ li {
   .mensagem {
     text-align: center;
     font-size: 24px;
-    margin-top: 10px;
+    margin-top: 80px;
   }
+  
+  .objetivos h2 {
+    text-align: center;
+}
 
-  section mensagem {
+
+  .objetivos{
+    width: 80%; /* Define a largura máxima dos containers internos */
+  margin: 20px;
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
-    background-color:  rgba(131, 148, 187, 0.24);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    animation: slideIn 1s ease-in-out;
+ 
+  }
+
+/* Mensagens aleatorias  */
+ .mensagens {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    height: 26%;
+    width: 20%;    
+    animation: slideIn 1s ease-in-out;
+     /* Posicionamento absoluto para controlar a posição */
+    position: absolute;
+    right: 20px; /* Distância da borda direita */
+    bottom: 20px; /* Distância da borda inferior */
+    animation: float 3s ease-in-out infinite;
+    background-image: url('nuvem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+      
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);   
+      
+        }
+      }
+
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

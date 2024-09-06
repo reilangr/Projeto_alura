@@ -8,10 +8,20 @@
     <title>Projeto Alura - Caminho da Prosperidade</title>
 </head>
 <body>
+     <!--Inicio Mensagens-->
+     <div class="mensagens">
+        <div class="mensagem">
+            <p id="mensagem-motivacional"></p>
+        </div>
+     </div>
+    <!--Fim mensagens-->
     <header>
+         
         <h1>Caminho da Prosperidade</h1>
     </header>
     <main>
+      
+
         <!--Inicio form cadastro tarefas-->
         <section>
             <div class="container">
@@ -20,11 +30,18 @@
                         <input type="text" id="tarefa" placeholder="Objetivo">
                         <input type="text" id="descricao" placeholder="Descrição">
                         <button type="submit">Cadastrar</button>
+                        <button onclick="imprimirLista()">Imprimir Lista</button>
                     </form>              
                 </div>
-            <div>
+                <div class="objetivos">
                     <h2>Seus Objetivos</h2>
                     <ul id="listaCadastros"></ul>
+                </div>
+            </div>
+                
+                   
+              
+
                 
             
 
@@ -40,11 +57,7 @@
         <!--<section class="resultados-pesquisa" id="resultados-pesquisa"> -->          
         </section> 
             
-        <section>
-            <div class="mensagem">
-                <p id="mensagem-motivacional"></p>
-            </div>
-        </section>
+        
         
 
     </main>
